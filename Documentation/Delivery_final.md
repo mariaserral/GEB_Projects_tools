@@ -16,3 +16,4 @@ Finally, when visualizing the surgical needle, we modified the Python code by re
 
 ## **3. Final conclusions** 
 
+This seminar was a practical look at connecting hardware sensors to software simulations for robotics. We set up an ESP32 and an IMU through PlatformIO to obtain real-time spatial data. By sending that data over a local Wi-Fi network, we were able to control a 3D plane and a virtual needle in RoboDK using Python. Dealing with the initial connection issues and axis alignment showed why we need a stable network and precise calibration for robotics to work properly.

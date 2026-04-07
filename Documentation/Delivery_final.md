@@ -1,19 +1,28 @@
 # **DELIVERY**
 Lucía Fantino, Maria Serral i Lucía Trellu
 
-## **1. First operating performances diagnostic** 
+## **1. Description of the laboratory session
+In this laboratory session we used an ESP32-based PCB board with an IMU sensor to obtain 3D orientation in space. 
 
-During the initial evaluation of the system, we observed that it was not functioning correctly, and we later found out the source of the problem was the WiFi connection, which needed to be re-started. Moreover, we had to ensure both the computer and the ESP32 device were connected to the same WiFi net.
-On the other hand, we needed to make sure the orientation of the axes that were represented in the simulation program of the computer matched those of the sensor, which were already established.
+To proceed with the session, we first set up the hardware; which included the ESP32, the IMU sensor and the PC. 
+In Visual Studio Code, we uploaded the `Endowrist_IMU` program to the Endo-module using PlatformIO. First, in the `Endowrist_IMU` program, we verified whether the Wi-Fi credentials (`Robotics_UB`) were correct. As they were already correct, no modifications were needed. However, during the initial evaluation of the system, we observed that it was not functioning correctly, and we later found out the source of the problem was the WiFi connection, which needed to be re-started.
 
-## **2. Corrections we have made in the code** 
-First, in the `Endowrist_IMU` program, we checked whether the Wi-Fi credentials (`Robotics_UB`) were correct. As they were already correct, no modifications were needed.
-In the same program, we replaced the PC IP address and the device ID (`receiverComputerIP` and `deviceId`) that were already defined in the code with those corresponding to our group.
+In the same program, we replaced the PC IP address and the device ID that were already defined in the code (`receiverComputerIP` and `deviceId`) with those corresponding to our group.
 
-Before running the `Receive_data_RPY_IMU_world.py` script, we also updated the `TARGET_DEVICE` variable to match our assigned device.
+Then, we ran the `3D_Orientation.rdk` file in the RoboDK to visualize the `Endowrist tool`. 
+The following step was to run the `Receive_data_RPY_IMU_world.py` script, but before doing so, we  updated the `TARGET_DEVICE` variable to match our assigned device. After running it, we reviewed the orientation obtained in the 3D representation in RoboDK, and answered the questions in the following section.  
 
-Finally, when visualizing the surgical needle, we modified the Python code by replacing `plane` with `surgical_needle` in the `object_name` variable.
+## **2. How you have proceed with the questions we suggest in last section
+**2.1. Is the plane 3D object in roboDK moving properly?**
 
-## **3. Final conclusions** 
+**2.2. What you have made to properly verify the orientation angles Roll, Pitch and Yaw?**
+
+We needed to make sure the orientation of the axes that were represented in the simulation program of the computer matched those of the sensor, which were already established.
+
+**2.3. Change the 3D object orientation to "surgical_needle". What you have to change in the python code?.**
+When visualizing the surgical needle, we modified the Python code by replacing `plane` with `surgical_needle` in the `object_name` variable.
+
+
+## **3. Final conclusions including a discussion on how you can use these tools in your avant-projecte or also in your TFG or future engineering projects
 
 This seminar was a practical look at connecting hardware sensors to software simulations for robotics. We set up an ESP32 and an IMU through PlatformIO to obtain real-time spatial data. By sending that data over a local Wi-Fi network, we were able to control a 3D plane and a virtual needle in RoboDK using Python. Dealing with the initial connection issues and axis alignment showed why we need a stable network and precise calibration for robotics to work properly.

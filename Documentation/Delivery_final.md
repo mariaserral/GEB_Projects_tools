@@ -15,7 +15,7 @@ The following step was to run the `Receive_data_RPY_IMU_world.py` script, but be
 ## 2. How you have proceed with the questions we suggest in last section
 **2.1. Is the plane 3D object in roboDK moving properly?**
 
-Initially, the plane’s movement was not exactly the same as the one we were doing with the sensor due to the misalignment between the sensor's axes and the virtual environment's axes.
+Initially, the plane’s movement was not synchronized with the sensor. Although the sensor was transmitting data, there was a misalignment between the sensor's local axes and the virtual environment's axes.
 
 **2.2. What you have made to properly verify the orientation angles Roll, Pitch and Yaw?**
 

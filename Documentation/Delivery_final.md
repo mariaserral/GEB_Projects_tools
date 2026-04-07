@@ -15,9 +15,11 @@ The following step was to run the `Receive_data_RPY_IMU_world.py` script, but be
 ## 2. How you have proceed with the questions we suggest in last section
 **2.1. Is the plane 3D object in roboDK moving properly?**
 
+Initially, the plane’s movement was not exactly the same as the one we were doing with the sensor due to the misalignment between the sensor's axes and the virtual environment's axes.
+
 **2.2. What you have made to properly verify the orientation angles Roll, Pitch and Yaw?**
 
-We needed to make sure the orientation of the axes that were represented in the simulation program of the computer matched those of the sensor, which were already established.
+We placed the sensor on a flat, stable surface, and then made sure that the axes of the virtual object matched the axes of the sensor, which are already defined.
 
 **2.3. Change the 3D object orientation to "surgical_needle". What you have to change in the python code?.**
 When visualizing the surgical needle, we modified the Python code by replacing `plane` with `surgical_needle` in the `object_name` variable.

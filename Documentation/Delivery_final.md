@@ -22,9 +22,12 @@ Initially, the plane’s movement was not synchronized with the sensor. Although
 We placed the sensor on a flat, stable surface, and then made sure that the axes of the virtual object matched the axes of the sensor, which are already defined.
 
 **2.3. Change the 3D object orientation to "surgical_needle". What you have to change in the python code?.**
+
 When visualizing the surgical needle, we modified the Python code by replacing `plane` with `surgical_needle` in the `object_name` variable.
 
 
 ## 3. Final conclusions including a discussion on how you can use these tools in your avant-projecte or also in your TFG or future engineering projects
 
 This seminar was a practical look at connecting hardware sensors to software simulations for robotics. We set up an ESP32 and an IMU through PlatformIO to obtain real-time spatial data. By sending that data over a local Wi-Fi network, we were able to control a 3D plane and a virtual needle in RoboDK using Python. Dealing with the initial connection issues and axis alignment showed why we need a stable network and precise calibration for robotics to work properly.
+
+Furthermore, this experience was very beneficial to our group project, as it helped us understand how to manage and troubleshoot ESP32 firmware while also teaching us how to create and work within a GitHub repository. These are tools that we will actively use in our work. Learning to configure the environment and manage code allows us to better understand how to integrate sensors and wireless communication, which represent the main challenges of our project.
